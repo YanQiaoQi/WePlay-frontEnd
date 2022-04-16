@@ -28,9 +28,9 @@ function MyButton({ title, action, type = 'common', style } = defaultSettings) {
   );
 }
 
-function ButtonList({ ui }) {
+function ButtonList({ ui, style }) {
   let ButtonList = ui.map((item) => {
-    return <MyButton key={item.title} {...item} />;
+    return <MyButton key={item.title} style={style} {...item} />;
   });
 
   //   return <div className={styles.ButtonList_container}>{ButtonList}</div>;
